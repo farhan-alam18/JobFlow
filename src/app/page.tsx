@@ -60,8 +60,8 @@ export default function Header() {
             The comprehensive job onboarding platform designed to make your
             transition into a new job seamless and efficient.
           </p>
-          <div className="my-5">
-            <Button asChild className="mx-2">
+          <div className="my-5 flex gap-3 justify-center">
+            <Button asChild className="">
               <Link href="">
                 Learn More{" "}
                 <span className="ml-2">
@@ -69,13 +69,16 @@ export default function Header() {
                 </span>
               </Link>
             </Button>
-            <Button asChild className="mx-2" variant="outline">
+            <Button asChild className="" variant="outline">
               <Link href="">Sign Up</Link>
             </Button>
           </div>
         </header>
 
-        <section className="mx-10 flex max-w-[] flex-col gap-20">
+        {/* <div>
+          
+        </div> */}
+        <section className="flex flex-col gap-20">
           <p className="text-center text-4xl">
             Simplify your job onboarding process with{" "}
             <span className="font-bold">JobFlow</span>.

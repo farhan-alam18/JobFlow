@@ -18,7 +18,7 @@ const Section: React.FC<SectionProps> = ({ data }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-10 justify-between items-center">
       {data.map((item, index) => (
-        <div key={index} className="flex flex-col gap-3 w-[500px]  items-center text-center border py-10 rounded-2xl shadow-md ">
+        <div key={index} className="flex flex-col gap-3 w-[300px] lg:w-[400px]   items-center text-center border py-10 rounded-2xl shadow-md ">
           {item.icon}
           <p className="font-semibold text-xl text-balance">{item.title}</p>
           <p className='text-balance'>{item.description}</p>
