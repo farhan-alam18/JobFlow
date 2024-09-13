@@ -16,13 +16,13 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ data }) => {
   return (
-    <div className="flex gap-10 justify-between mx-10">
+    <div className="flex flex-col lg:flex-row gap-10 justify-between items-center">
       {data.map((item, index) => (
-        <div key={index} className="flex flex-col gap-3 w-[500px] items-center text-center">
+        <div key={index} className="flex flex-col gap-3 w-[500px]  items-center text-center border py-10 rounded-2xl shadow-md ">
           {item.icon}
-          <p className="font-semibold text-xl">{item.title}</p>
-          <p>{item.description}</p>
-          <Button asChild variant='ghost'>
+          <p className="font-semibold text-xl text-balance">{item.title}</p>
+          <p className='text-balance'>{item.description}</p>
+          <Button asChild variant='secondary'>
             <Link href={item.linkPath}>{item.link} <span className="ml-2"><MdOutlineArrowOutward /></span></Link>
           </Button>
         </div>

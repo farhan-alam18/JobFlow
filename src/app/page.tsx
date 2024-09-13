@@ -48,59 +48,61 @@ export default function Header() {
 
   return (
     <>
-      <header className="my-32 text-center flex flex-col gap-3">
-        <p className="text-5xl p-2">
-          Streamline your job search <br />{" "}
-          <span>
-            with <span className="font-bold">JobFlow</span>
-          </span>
-        </p>
-        <p className="">
-          The comprehensive job onboarding platform designed to make your
-          transition into a new job seamless and efficient.
-        </p>
-        <div className="my-5">
-          <Button asChild className="mx-2">
-            <Link href="">
-              Learn More{" "}
-              <span className="ml-2">
-                <MdOutlineArrowOutward />
-              </span>
-            </Link>
-          </Button>
-          <Button asChild className="mx-2" variant="outline">
-            <Link href="">Sign Up</Link>
-          </Button>
-        </div>
-      </header>
-
-      <section className="flex flex-col gap-20 mx-10 max-w-[]">
-        <p className="text-4xl text-center">
-          Simplify your job onboarding process with{" "}
-          <span className="font-bold">JobFlow</span>.
-        </p>
-        <Section data={section} />
-      </section>
-
-      <section className="flex gap-56 items-center justify-between my-28 mx-20 border-2 p-10 ">
-        <div>
-          <p className="text-2xl font-medium tracking-tighter my-1">
-            Calling All Employers: Elevate Your Hiring Strategy Now!
+      <div className="container">
+        <header className=" my-32 flex flex-col gap-3 text-center">
+          <h1 className="p-2 text-3xl tracking-tight md:text-5xl">
+            Streamline your job search <br />{" "}
+            <span>
+              with <span className="font-bold">JobFlow</span>
+            </span>
+          </h1>
+          <p className="text-balance">
+            The comprehensive job onboarding platform designed to make your
+            transition into a new job seamless and efficient.
           </p>
-          <p className="text-sm">
-            Unlock Your Hiring Potential with Effortless Job Posting or a
-            Personalized Demo Experience.
+          <div className="my-5">
+            <Button asChild className="mx-2">
+              <Link href="">
+                Learn More{" "}
+                <span className="ml-2">
+                  <MdOutlineArrowOutward />
+                </span>
+              </Link>
+            </Button>
+            <Button asChild className="mx-2" variant="outline">
+              <Link href="">Sign Up</Link>
+            </Button>
+          </div>
+        </header>
+
+        <section className="mx-10 flex max-w-[] flex-col gap-20">
+          <p className="text-center text-4xl">
+            Simplify your job onboarding process with{" "}
+            <span className="font-bold">JobFlow</span>.
           </p>
-        </div>
-        <div className="flex gap-5">
-          <Button asChild>
-            <Link href="">Post a Job</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="">Request a Demo</Link>
-          </Button>
-        </div>
-      </section>
+          <Section data={section} />
+        </section>
+
+        <section className="flex flex-col lg:flex-row items-center justify-between mt-20 gap-6 border-2 rounded-2xl shadow-md p-10">
+          <div>
+            <p className="my-1 text-2xl font-medium tracking-tighter">
+              Calling All Employers: Elevate Your Hiring Strategy Now!
+            </p>
+            <p className="text-sm">
+              Unlock Your Hiring Potential with Effortless Job Posting or a
+              Personalized Demo Experience.
+            </p>
+          </div>
+          <div className="flex gap-5">
+            <Button asChild>
+              <Link href="">Post a Job</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="">Request a Demo</Link>
+            </Button>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

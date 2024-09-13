@@ -101,7 +101,7 @@ function Pagination({
       page: page.toString(),
     });
 
-    return `/?${searchParams.toString()}`;
+    return `/discover/?${searchParams.toString()}`;
   }
 
   return (
